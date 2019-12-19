@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+//package的名字必须和rpc注册的服务名一致
+package go.micro.srv.demo;
+
+
+service Demo {
+    rpc Hello (NameRequest) returns (HelloResponse) {
+    }
+}
+
+message NameRequest {
+    string name =1;
+}
+
+message HelloResponse {
+    string content = 1;
+}

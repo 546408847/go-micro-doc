@@ -1,0 +1,35 @@
+project: "demo"
+database:
+    dialect: "mysql"
+    host: "127.0.0.1"
+    port: 3306
+    database: "demo"
+    user: "root"
+    password: "root"
+    charset: "utf8mb4"
+    maxidleconnnum: 5
+    maxopenconnnum: 10
+redis:
+    url: "127.0.0.1:6379"
+    password: ""
+    maxidle: 10
+    maxactive: 10
+domain:
+    mask: "http://test.com"
+log:
+    path: "logs"
+    maxage: 3
+    rotationtime: 24
+    rotationcount: 3
+registry:
+    address: "127.0.0.1:2379"
+    client:
+        risk: "127.0.0.1:2379"
+    ttl: 10
+    interval: 5
+    version: "latest"
+    metadata:
+        system: "demo"
+jaeger:
+    host: "115.159.200.17"
+    port: 6831
