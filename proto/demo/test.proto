@@ -13,6 +13,10 @@ message NameRequest {
     string name =1;
 }
 
+message CodeRequest {
+    string code =1;
+}
+
 message HelloResponse {
     string content = 1;
 }
