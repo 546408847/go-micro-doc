@@ -120,3 +120,6 @@ createproto='protoc --proto_path=$GOPATH/src:. --micro_out=. --go_out=.'
    	"name":"go"
    }'
    ```
+
+### GIN框架的学习
+1. [binding参数校验](https://frankhitman.github.io/zh-CN/gin-validator/)
