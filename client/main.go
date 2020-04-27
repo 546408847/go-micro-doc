@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"go-micro-doc/client/handler"
+	"go-micro-doc/client/middleware"
 	"go-micro-doc/common/component"
 	"go-micro-doc/common/constant"
 	"go-micro-doc/common/model"
@@ -30,7 +31,7 @@ func main() {
 
 	//注册路由
 	engine := gin.New()
-	engine.Use(gin.Logger(), gin.Recovery())
+	engine.Use(gin.Recovery(), gin.Logger(), middleware.Cors())
 	handler.RegisterRoute(engine)
 	service.Handle("/", engine)
 
